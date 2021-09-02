@@ -1,0 +1,3 @@
+Primitive Data type - Number(int,float), String(',"),boolean(1,0),Null ,undefined
+
+Non-primitive data types - array, object, function
