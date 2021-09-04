@@ -1,0 +1,230 @@
+*Boolean context
+
+*Truthy value
+* All numbers(positive and negative) are truthy except zero
+* All strings are truthy
+* The boolean true
+
+*Falsy values
+* 0 / -0
+* 0n
+* null
+* undefined
+* NaN
+* the boolean false
+* '', "", ``, empty string
+
+
+* Example:
+let a = ""
+
+if(a){
+    console.log(a)
+} else {
+    console.log(a)
+}
+
+
+*Assignment operators & Arithmetic Operators
+
+*Addition(+)       : x + y
+*Subtraction(-)    : x - y
+*Multiplication(*) : x * y
+*Division(/)       : x / y
+*Modulus(%)        : x % y
+*Exponential(**)   : x ** y
+
+left = right
+
+**(Note:if use assignment move right to left()
+
+*Operator             Example         Same As           Description 
+*  =                  x = y           x = y            y is stored in x 
+*  +=                 x += y          x = x + y        x + y result is stored in x  
+*  -=                 x -= y          x = x - y        x - y result is stored in x 
+*  *=                 x *= y          x = x * y        x * y result is stored In x 
+*  /=                 x /= y          x = x / y        x / y result Is stored In x 
+*  %=                 x %= y          x = x % y        x % y result is stored in x 
+*  **=                x **= y         x = x ** y       x ** y result is stored in x
+
+* Example :
+let x = 6
+let y = 3
+
+ x = x + y
+console.log('c:', x)
+
+console.log("Addition(+) : ", (x + y))
+console.log("Subtraction(-) :",(x - y))
+console.log("Multiplication(*) : ", (x * y))
+console.log("Division(/) :", (x / y))
+console.log("Modulus(%)  : ", (x % y))
+console.log("Exponential(**) : ", (x ** y))
+
+ * Math Problem
+
+* (l x b)
+ let l = 20
+ let b = 10
+ let AreaOfRectangle = l * b
+ console.log('Area Of Rectangle:', AreaOfRectangle)
+
+
+
+* Comparison Operators
+
+* Operator        Name                                   Example 
+* ==              Equal in value only                     x == y 
+* ===             Equal in value and data type            x === y 
+* !=              Not equal                               x != y 
+* >               Greater than                            x > y 
+* <               Less than                               x < y 
+* >=              Greater than or equal to                x >= y 
+* <=              Less than or equal to                   x <= y 
+
+
+*example:
+
+console.log(3 == '3')
+console.log(3 === '3')
+
+
+* --- Small Test ---
+
+** console.log(0 == false)
+** console.log(0 === false)
+
+* --- Answer ---
+ 1.)
+ 2.)
+
+
+* Logical Operators
+
+* And (&&)
+* Or  (||)
+* Not (!)
+
+* And - Marriage
+* -----------------------------
+* a           b         result
+* -----------------------------
+* 0           0         0
+* 0           1         0
+* 1           0         0
+* 1           1         1
+
+
+* Or - Lover
+* -----------------------------
+* a           b         result
+* -----------------------------
+* 0           0         0
+* 0           1         1
+* 1           0         1
+* 1           1         1
+
+
+*Not - Child
+
+*!0 -> 1
+*!1 -> 0
+
+* Example
+
+const a = true;
+const b = true;
+console.log("Marriage",(a&&b))
+
+const a = true;
+const b = false;
+console.log("Lover",(a||b))
+
+const a = true;
+console.log("Child",(!a))
+
+* Increment Operator(++) & Decrement Operator(--)
+
+* Name                                          Example
+
+* Increment Operator (Pre-increment)            ++variableName
+* Increment Operator (Post-increment)           variableName++
+* Decrement Operator (Pre-increment)            --variableName
+* Decrement Operator (Post-increment)           variableName--
+
+
+* Example :
+let countOne = 0
+console.log('count before:', countOne)
+console.log("pre",++countOne) 
+console.log("count after",countOne)
+
+
+let countTwo = 0
+console.log('count before:', countTwo)
+console.log("post",countTwo++) 
+console.log("count after",countTwo)
+
+
+* Ternary Operators
+
+* Syntax : condition ? true : false  (**Short from)
+
+like : 
+if(condition){
+    true
+} else {
+    false
+}
+
+* Example :
+
+let a = true
+let result = a ? "ok" : "not"
+console.log('result:', result)
+
+
+*Window Methods
+
+* alert(message)                                     - Show the message
+* prompt('required text', 'optional text')           - Get data from user
+* confirm('Are you sure you like to delete? ')       - ask to the user
+
+
+
+* Date Object
+
+* we can get day, date, month , year, hours, minutes, seconds, time, milliseconds
+
+let date = "Sat Sep 04, 2021 18:30:00"
+let a = new Date(date)
+console.log('Raw Date:', a)
+console.log('Day:', a.getDay())
+ *Sunday is 0, Monday is 1 and Saturday is 6
+ *Getting the weekday as a number (0-6)
+console.log('Date:', a.getDate())
+console.log('Month:', a.getMonth())
+console.log('Year:', a.getFullYear())
+console.log('Hours:', a.getHours())
+console.log('Minutes:', a.getMinutes())
+console.log('Second:', a.getSeconds())
+console.log('Time:', a.getTime())
+console.log('MilliSeconds:', a.getMilliseconds())
+
+
+
+* In Detail Visit this Link or use moment.js
+
+*** https://newbedev.com/csharp-javascript-format-date-yyyy-mm-dd-hh-mm-ss-code-example
+
+
+* ----- Task is -----
+
+* Using prompt get the year the user was born and if the user is 18 or not.
+
+* --- Answer ---
+
+let a = Number(prompt("Enter the year"))
+let currentAge = (new Date()).getFullYear() - a
+alert(`Current Age is : ${currentAge}`)
+

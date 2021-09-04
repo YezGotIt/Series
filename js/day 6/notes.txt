@@ -1,0 +1,226 @@
+*! bad way
+let arrOne = Array
+console.log('arrOne:', arrOne)
+
+*! bad way
+let arrTwo = new Array()
+console.log('arrTwo:', arrTwo)
+
+* good way
+let arrThree = []
+console.log('arrThree:', arrThree)
+
+* Number array
+
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100]
+console.log('numbers:', numbers)
+
+* String array
+
+const fruits = ['banana', 'orange', 'mango', 'lemon']
+console.log('fruits:', fruits)
+
+* Different Data Type Array
+
+const diffDataType = ["dfd", 2 , true, 2.4, {google: "haha"}]
+console.log('diffDataType:', diffDataType)
+
+we can do with array:
+
+* .from()
+* .keys()
+* .push()
+* .pop()
+* .toString()
+* .fill()
+* .every()
+* .values()
+* .some()
+* .shift()
+* .unshift()
+*  Array.isArray()
+
+
+* Day 3
+* .slice()
+* .splice()
+* .indexOf()
+* .includes()
+* .reverse()
+* .join()
+* .concat() / Spread operators
+
+* .from(): static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+* Syntax : Array.from(arrayLike, (element) => { ... } )
+* Syntax : Array.from(arrayLike, (element, index) => { ... } )
+
+* Example for from()
+let arrayLike = "javascript"
+
+console.log(Array.from(arrayLike))
+console.log(Array.from(arrayLike, el=>el + el))
+
+* keys(): each index in the array
+* Syntax : keys()
+
+* Example for Keys() : 
+
+let arrayLike = [0,1,2,3,4]
+
+const iterator = arrayLike.keys();
+console.log('iterator:', iterator)
+
+for (const key of iterator) {
+  console.log('key:', key)
+}
+
+
+* push() : adds one or more elements to the end of an array and in return new length of the array.
+
+* Syntax : push(element0)
+* Syntax : push(element0, element1)
+* Syntax : push(element0, element1, ... , elementN)
+
+* Example for push() :
+
+let arrayLike = [0,1,2,3,4]
+console.log('arrayLike:', arrayLike)
+console.log('arrayLike:', arrayLike.push("fdf"))
+console.log('arrayLike:', arrayLike)
+
+
+* pop() : removes the last element from an array and returns that element.
+
+* Syntax : pop()
+
+* Example for pop() :
+
+let arrayLike = [0,1,2,3,6]
+console.log('arrayLike:', arrayLike)
+console.log('arrayLike:', arrayLike.pop())
+console.log('arrayLike:', arrayLike)
+
+
+* toString() : string representing the specified array and its elements. 
+
+* Syntax : toString()
+
+* Example for toString() :
+
+let arrayLike = [0,1,2,undefined,false,"dfd"]
+console.log('arrayLike:', arrayLike)
+console.log('arrayLike:', arrayLike.toString()))
+
+
+* .fill() :  changes all elements in an array to a static value (start index, end index). It returns the modified array.
+
+* Syntax : fill(value)
+* Syntax : fill(value, start)
+* Syntax : fill(value, start, end)
+
+* Example for fill() : 
+
+let arrayLike = [0,1,2,undefined,false,"dfd"]
+console.log('arrayLike:', arrayLike.fill(0))
+console.log('arrayLike:', arrayLike.fill(1, 2))
+console.log('arrayLike:', arrayLike.fill(3, 2,4))
+
+
+* every() :  tests whether all elements in the array pass (by function). it return boolean value.
+
+* Syntax : every((element) => { ... } )
+* Syntax : every((element, index) => { ... } )
+
+* Example for every() :
+
+let arrayLike = [1,2,3,4,5]
+console.log('arrayLike:', arrayLike.every((el) => el < 10))
+
+
+* .entries() : convert into key/value pairs 
+
+* Syntax : entries()
+
+* Example for entries() : 
+
+let arrayLike = [1,2,3,4,5]
+const iterator = arrayLike.entries();
+console.log('iterator:', iterator.next().value)
+
+
+* .values() : it contains the values for each index in the array.
+
+* Syntax : values()
+
+* Example for values() : 
+
+const arrayLike = [1,2,3,4,5];
+const iterator = arrayLike.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+* .some() : at least one element in the array passes. it return boolean value.
+
+* Syntax : some((element) => { ... } )
+* Syntax : some((element, index) => { ... } )
+
+* Example for some() : 
+
+const arrayLike = [10, 2, 6, 4, 5];
+
+console.log(arrayLike.some(el => el % 2 === 0));
+
+
+* shift() :  removes the first element from an array and returns that removed element. it will change the array the size.
+
+* Syntax : shift()
+
+* Example for shift() :
+const arrayLike = [10, 2, 6, 4, 5];
+
+console.log('arrayLike:', arrayLike)
+console.log(arrayLike.shift());
+console.log('arrayLike:', arrayLike)
+
+* unshift() : adds one or more elements to the beginning of an array and returns the length of the array.
+
+* Syntax : unshift()
+
+* Example for unshift() :
+
+const arrayLike = [10, 2, 6, 4, 5];
+
+console.log('arrayLike:', arrayLike)
+console.log(arrayLike.unshift("9"));
+console.log('arrayLike:', arrayLike)
+
+
+*  Array.isArray() : the passed value is an Array. it will return boolean value
+
+* Syntax : Array.isArray(value)
+
+* Example for Array.isArray(value):
+
+const arrayLike = [10, 2, 6, 4, 5];
+const arrayLikes = "dsd"
+
+console.log('arrayLike:', Array.isArray(arrayLike))
+console.log('arrayLike:', Array.isArray(arrayLikes))
+
+
+ * Array of Array
+ * 2-d array
+ const arrayOfArray =  [[1, 2, 3], [1, 2, 3]]
+ console.log('arrayOfArray:', arrayOfArray)
+ console.log(arrayOfArray[0])
+ console.log(arrayOfArray[1]) 
+
+ * Array of Object
+ const firstNums = {name: "name1"}
+ const secondNums = {name: "name2"}
+ const arrayOfArray =  [firstNums, secondNums]
+ console.log('arrayOfArray:', arrayOfArray)
+ console.log(arrayOfArray[0])
+ console.log(arrayOfArray[1])

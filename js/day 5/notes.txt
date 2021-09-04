@@ -1,0 +1,183 @@
+* Conditionals
+
+* - To make decisions based on different conditions.
+* - JavaScript script executed sequentially from top to bottom
+* - Comparison and logical operators we learned in the previous day 4.
+
+* if
+* if else
+* if ,else if, else
+* switch
+* ternary operator
+
+
+* if - Block
+
+* Syntax
+* if (condition) {
+   * // statements
+* }
+
+* Example:
+let apple = 10
+
+if(apple == '10'){
+    console.log(`Yez, he have ${apple} apple.`)
+}
+
+* if else - Block
+
+* Syntax :
+
+* if (condition) {
+*   // run for truthy condition
+* } else {
+*    // run for false condition
+* }
+
+* Example:
+let apple = 10
+
+if(apple === 10){
+    console.log(`Yez, he have ${apple} apples.`)
+}else{
+    console.log(`No, he is not having ${apple} apples.`)
+}
+
+
+* if ,else if, else - Block
+
+*  Syntax :
+
+* if (condition) {
+*       // code
+* } else if (condition) {
+*       // code
+* } else {
+*       // code
+* }
+
+
+* Example :
+
+let a = 0
+
+if (a > 0) {
+  console.log(`${a} is a positive number`)
+} else if (a < 0) {
+  console.log(`${a} is a negative number`)
+} else if (a == 0) {
+  console.log(`${a} is zero`)
+} else {
+  console.log(`${a} is not a number`)
+}
+
+
+* Switch
+
+* Syntax:
+
+* switch(caseValue){
+*   case 1:
+*     // code
+*     break
+*   case 2:
+*    // code
+*    break
+*   case 3:
+*   // code
+*   default:
+*    // code
+* }
+
+
+* Example:
+
+let date = "Sep 05, 2021 18:30:00"
+let a = new Date(date).getDay()
+console.log('a:', a)
+
+switch (a) {
+    case 0:
+        console.log('Sunday')
+        break
+    case 1:
+        console.log('Monday')
+        break
+      case 2:
+        console.log('Tuesday')
+        break
+      case 3:
+        console.log('Wednesday')
+        break
+      case 4:
+        console.log('Thursday')
+        break
+      case 5:
+        console.log('Friday')
+        break
+      case 6:
+        console.log('Saturday')
+        break
+      default:
+        console.log('It is not a week day.')
+}
+
+* Ternary Operators
+
+* Syntax : condition ? true : false  
+
+* Example : 
+let apple = 10
+
+if(apple === 10){
+    console.log(`Yez, he have ${apple} apples.`)
+}else{
+    console.log(`No, he is not having ${apple} apples.`)
+}
+
+* Or
+
+let result = apple === 10 ? `Yez, he have ${apple} apples.` : `No, he is not having ${apple} apples.`
+console.log('result:', result)
+
+
+
+* ----- Tasks -----
+
+* Task One - Show the number is even or odd. Use modules, ternary operator and prompt(“Enter your number:”).
+
+* Task Two - Show the grades to students according to this scores. Use if else if else.
+* 80-100 A
+* 70-89  B
+* 60-69  C
+* 50-59  D
+* 0-49   F
+
+
+
+
+
+
+
+
+
+* --- Answer For Task One ---  
+let number = prompt(“Enter your number:”)
+let result = number%2 === 0 ? "Number is even" : "Number is odd"
+alert(result)
+
+
+* --- Answer For Task Two ---  
+let mark = 0
+if (mark >= 80 && mark <= 100) {
+    console.log(`A grade`)
+} else if (mark >= 70 && mark <= 79) {
+    console.log(`B grade`)
+} else if (mark >= 60 && mark <= 69) {
+    console.log(`C grade`)
+}else if (mark >= 50 && mark <= 59) {
+    console.log(`D grade`)
+} else {
+    console.log(`F grade`)
+}

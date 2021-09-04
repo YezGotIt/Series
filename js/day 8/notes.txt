@@ -1,0 +1,141 @@
+! Function 
+
+* clean and easy to read
+* reusable
+* easy to test
+
+
+* Function can be declared or created in couple of ways:
+
+* Declaration function
+* Expression function
+* Anonymous function
+* Arrow function
+
+
+* Function declaration :
+
+* key Words : function
+* Syntax : 
+* function functionName (){
+*     // Code Here
+* }  
+
+* Example:
+
+* func declared
+
+function helloFunction(){
+    console.log("Function")
+}
+
+* func calling by function name
+
+helloFunction()
+
+
+* Function without a parameter and return :
+
+function helloFunction(){
+    let a = 6
+    let b = 3
+    let c = a + b
+    console.log(c)
+}
+
+console.log('helloFunction:', helloFunction())
+
+* Function returning value :
+
+function helloFunction(){
+    let a = 6
+    let b = 3
+    let c = a + b
+    return c
+}
+
+console.log('helloFunction:', helloFunction())
+
+
+* Function with one parameter :
+
+function getName(name){
+    return `Hello, ${name}`
+}
+
+let name = prompt("enter the name")
+console.log("Display Name", getName(name))
+
+* Function two parameter :
+
+function helloFunction(a,b){
+    let c = a + b
+    return c
+}
+
+let a = prompt("enter the number 1")
+let b = prompt("enter the number 2")
+
+console.log('helloFunction:', helloFunction(a,b))
+
+
+* Function many parameter :
+
+function helloFunction(a,b,c){
+    return a + b + c
+}
+
+let a = 9
+let b = 10
+let c = 1
+
+console.log('helloFunction:', helloFunction(a,b,c))
+
+
+* Anonymous Function :
+
+const gg = function (){
+    console.log("Anonymous Function ")
+}
+
+console.log(gg)
+
+* Expression Function :
+
+const gg = function (name) {
+    console.log(name)
+}
+
+console.log(gg("i'm, js"))
+
+
+* Self Invoking Functions : 
+* No function name and no Calling.
+
+(function(n) {
+  console.log(n * n)
+})(2)
+
+
+* Arrow Function : 
+* Support in ES6
+
+const gg = (name) => {
+    console.log(name)
+}
+
+console.log(gg("i'm, js"))
+
+* Function with default parameters : 
+
+const gg = (name) => {
+    console.log(name)
+}
+
+console.log(gg("i'm, js"))
+
+const gg = (name = "B2I") => {
+    console.log(name)
+}
+
+console.log(gg())

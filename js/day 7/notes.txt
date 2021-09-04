@@ -1,0 +1,167 @@
+* Loops 
+
+* Basic things is : Initial value, condition & increment / decrement it must be in loop state
+
+* There are 5 types :
+* while loop
+* do while loop
+* for Loop
+* for of loop
+* for in loop (Note: for object)
+
+
+* while loop:
+
+* Syntax : let initialVariable
+* while(condition){
+*    // Code Here
+*     increment / decrement
+* }
+
+* Example :  
+
+let a = [1,2,3,4,5,6]
+console.log("length of a :", a.length)
+let i = 0;
+
+while(i < a.length){
+    console.log("Ind :", i)
+    console.log("value : ", a[i])
+    i++
+}
+
+
+* do while loop 
+
+* Syntax : let initialVariable
+* do{
+*     // Code Here
+* } while (condition)
+
+
+* Example:
+let a = [1,2,3,4,5,6]
+console.log("length of a :", a.length)
+let i = 0;
+
+do{
+    console.log("value : ", a[i])
+    i++
+}while(i < a.length)
+
+
+* for loop :
+
+* Syntax : for(let initial variable; condition; increment / decrement){
+*     // Code Here
+* }
+
+* Example :
+
+
+  let a = [1,2,3,4,5,6]
+* Index  0,1,2,3,4,5
+
+console.log("length of a :", a.length)
+
+for(let i =0; i < a.length; i++){
+    console.log("value",a[i])
+}
+
+*! Do try this :
+
+for(let i =1; i > 0; i++){
+    console.log("index :",i)
+}
+
+for(let i =1; i < 10; i--){
+    console.log("index :",i)
+}
+
+* for of loop:
+
+* Syntax : for (variable of iterable) {
+*   // Code Here
+* }
+
+* Example:
+
+let a = [1,2,3,4,5,6]
+
+for(let i of a){
+    console.log(i)
+}
+
+let b = "javascript"
+
+for(let i of b){
+    console.log(i)
+}
+
+* for in loop:
+
+* Syntax : for (variable in iterable) {
+*   // Code Here
+* }
+
+* Example:
+
+let a = {name: "gg", done:"okay"}
+
+for(let i in a){
+    console.log(`[key] --> ${i} value --> ${a[i]}` )
+}
+
+
+
+* It must use in loop / condition state.
+* break
+* continue
+
+* Let see example
+
+let a = 10
+
+for(let i = 0; i < a ; i++){
+    if(i === 5){
+        continue
+    }
+    console.log(i)
+}
+
+
+* To check the speed performance of the loop (for loop is faster)
+* https://blog.bitsrc.io/measuring-performance-of-different-javascript-loop-types-c0e9b1d193ed
+
+
+
+* ----- Small Test -----
+
+let list = ["a", "b", "c", "d", "e", "f", "g", "h"]
+let newArr = []
+for(let i of list){
+    * Do what 
+}
+
+* //["A", "B", "C", "D", "E", "F", "G", "H"]
+
+
+
+* ----- Task -----
+
+/ 0 * 0 = 0
+/ 1 * 1 = 1
+/ 2 * 2 = 4
+/ 3 * 3 = 9
+/ 4 * 4 = 16
+/ 5 * 5 = 25
+
+
+
+
+
+* --- Answer ---
+
+for(let i = 0; i <= 5; i++){
+  console.log(`${i} * ${i} = ${i * i}`)
+}
