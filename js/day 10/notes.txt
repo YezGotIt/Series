@@ -1,0 +1,59 @@
+* Scope : 
+
+* A variable can declared at different scope.
+* The key word var, let and const.
+
+* There are 3 Scope:
+
+* Window
+* Global
+* Local
+
+* Window Scope Example:
+
+a = 'JS' 
+b = 30 
+function learnScope() {
+  console.log(a, b)
+  if (true) {
+    console.log(a, b)
+  }
+}
+
+learnScope()
+console.log(a, b) 
+
+
+* Global Scope Example:
+
+let a = 'JS' 
+let b = 30 
+function learnScope() {
+  console.log(a, b)
+  if (true) {
+      let a = "HTML"
+      let b = "20"
+    console.log(a, b)
+  }
+}
+
+learnScope()
+console.log(a, b) 
+
+
+* Local Scope Example:
+
+let a = 'JS' 
+let b = 30 
+function learnScope() {
+  console.log(a, b)
+  if (true) {
+      let a = "HTML"
+      let b = "20"
+      let c = "5"
+    console.log(a, b, c)
+  }
+}
+
+learnScope()
+console.log(a, b) 
