@@ -1,0 +1,54 @@
+* Object :
+
+* Create an object :
+
+* const obj = {}
+
+* Example:
+
+const object1 = {
+  firstName: 'kutty',
+  lastName: "papa",
+  college: "MRS",
+  course: "CSE",
+  degree: "B-tech",
+  subject: ['chemistry','mathematics','physics','computer science'],
+  getFullName: function() {
+  return `${this.firstName}${this.lastName}`
+}
+}
+
+* Copy the object :
+console.log('object1:', object1)
+const copy = Object.assign({}, object1)
+copy.firstName = "gg"
+console.log('copy:', copy)
+
+* keys()
+
+const keys = Object.keys(copyPerson)
+console.log('keys:', keys)
+
+* values()
+
+const value = Object.values(copyPerson)
+console.log('value:', value)
+
+* entries()
+
+const entries = Object.entries(copyPerson)
+console.log(entries)
+
+* hasOwnProperty()
+
+console.log(copy.hasOwnProperty('firstName'))
+
+* JSON.stringify()
+
+const str = JSON.stringify(copy)
+console.log("str",typeof str)
+
+* JSON.parse()
+
+const parse = JSON.parse()
+console.log("parse", typeof parse)
