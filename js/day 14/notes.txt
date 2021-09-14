@@ -1,0 +1,158 @@
+
+* Destructuring an array and get the rest of array elements
+
+const number = [1, 2, 3, 4, 5, 6, 7, 8]
+console.log('number:', number)
+
+const [a ,b ,c ,...rest] = number
+
+console.log('a:', a)
+console.log('b:', b)
+console.log('c:', c)
+
+console.log('rest:', rest)
+
+* Destructuring array during iteration
+
+const number = [[1, 2, 3], [4, 5, 6, 7, 8]]
+console.log('number:', number)
+
+for(const [a,b,c] of number){
+    console.log(a,b,c)
+}
+
+* Destructuring an object
+
+const data = {
+    name: "kutty",
+    year: 2021,
+    college: "MRS",
+}
+console.log('data:', data)
+
+const {name, year, college} = data
+
+console.log('name:', name)
+console.log('year:', year)
+console.log('college:', college)
+
+* Renaming during structuring
+
+const {name : n, year : y, college : c = "dummy"} = data
+
+console.log('name:', name)
+console.log('year:', year)
+console.log('college:', college)
+
+* Object parameter without destructuring
+
+const data = {
+    name: "kutty",
+    year: 2021,
+    college: "MRS",
+}
+
+const bad = (data) =>{
+    console.log('data:', data.name)
+    console.log('data:', data.year)
+    console.log('data:', data.college)
+}
+
+console.log(bad(data))
+
+* Object parameter with destructuring
+
+const good = ({name,year,college}) =>{
+console.log('college:', college)
+console.log('year:', year)
+console.log('name:', name)
+}
+
+console.log(good(data))
+
+* Destructuring object during iteration
+
+const data = [
+    {
+    name: "kutty",
+    year: 2021,
+    college: "MRS",
+},{
+    name: "kutty",
+    year: 2021,
+    college: "MRS",
+}
+]
+
+for(const {name, year, College} of data){
+console.log('name:', name)
+console.log('year:', year)
+console.log('College:', College)
+}
+
+* Spread operator to copy array
+
+let a = [1, 2, 3,]
+console.log('a:', a)
+let b = [...a, 4]
+b[0] = 7
+console.log('b:', b)
+
+
+* Spread operator to copy object
+
+const data = {
+    name: "kutty",
+    year: 2021,
+    college: "MRS",
+}
+
+const copeOfObject = {...data, subject: ["py", "ch"]}
+copeOfObject.name= "papa"
+console.log('copeOfObject:', copeOfObject)
+
+
+* --- Small Test ---
+
+   * const students = [
+   *      ['Raks', ['HTM', 'CSS', 'JS', 'React'], [88, 95, 70, 85]],
+   *      ['John', ['HTM', 'CSS', 'JS', 'Python'], [85, 78, 95, 80]]
+   *    ]
+
+
+   * Output
+   *   [
+   *   {
+   *     name: 'Raks',
+   *     skills: ['HTM','CSS','JS','React'],
+   *     scores: [98,85,90,95]
+   *   },
+   *   {
+   *     name: 'John',
+   *     skills: ['HTM', 'CSS', 'JS', 'Python'],
+   *     scores: [85, 78, 95, 80]
+   *   }
+   * ]
+
+
+
+
+
+
+   * --- Answer ---
+const students = [
+  ["Raks", ["HTM", "CSS", "JS", "React"], [88, 95, 70, 85]],
+  ["John", ["HTM", "CSS", "JS", "Python"], [85, 78, 95, 80]],
+];
+
+function arrayOfObject(data) {
+  const arrayOfObject = [];
+
+  for (const [name, skills, scores] of data) {
+    const obj = { name, skills, scores };
+    arrayOfObject.push(obj);
+  }
+  return arrayOfObject;
+}
+
+console.log(arrayOfObject(students));
