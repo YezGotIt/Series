@@ -1,6 +1,6 @@
 # Web Storage - Day 17
 
-### It provides mechanisms by which browsers can store key/value pairs
+### It provides mechanisms by which browsers can store key/value pairs.
 
 
 * `Cookies` - Cookies are data, stored in small text files, on your computer.
