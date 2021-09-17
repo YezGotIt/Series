@@ -19,7 +19,7 @@
      - SameSite - lax**, strict, none
      - path - defaults to the current path 
    ```
-   // To setting cookie
+   // To set a cookie
    document.cookie = "name=cookie storage; SameSite=none; Secure; max-age=60*60*1000; path=/;"
 
 
