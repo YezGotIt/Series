@@ -7,7 +7,7 @@
 
    - Cookies Max Storage - 4096 bytes
    - In javascript we should use `document.cookie` 
-   - Cookie methods:
+   - Cookie parameter:
      - max-age | expires  - In second only ( eg : 60 * 60* 30) | date-in-GMTString-format (eg: Thu, 18 Dec 2013 12:00:00 UTC) (js in build method is : { (new Date).toUTCString() }
      - secure - only be transmitted over secure protocol as https.
      - SameSite - lax**, strict, none
