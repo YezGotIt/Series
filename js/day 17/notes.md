@@ -3,15 +3,9 @@
 ### It provides mechanisms by which browsers can store key/value pairs
 
 
-* Cookies Storage - 4096 bytes
-
-* Session Storage - 5Mb
-
-* Local Storage - 10MB
-
-
 * `Cookies` - Cookies are data, stored in small text files, on your computer.
 
+   - Cookies Max Storage - 4096 bytes
    - In javascript we should use `document.cookie` 
    - Cookie methods:
      - max-age | expires  - In second only ( eg : 60 * 60* 30) | date-in-GMTString-format (eg: Thu, 18 Dec 2013 12:00:00 UTC) (js in build method is : { (new Date).toUTCString() }
@@ -34,7 +28,8 @@
 
 
 * `sessionStorage` - Available for the duration of the page session. Data is never transferred to the server (as long as the browser is open, including page reloads and restores).
-    
+  
+    - Session Max Storage - 5Mb
     - In javascript we should use `window.sessionStorage` | `sessionStorage`.
         - SessionStorage methods:
             * sessionStorage.setItem('key', 'value') 
@@ -66,6 +61,7 @@ console.log(sdata)
 
 * `localStorage` - same has sessionStorage but persists even when the browser is closed and reopened.
 
+    - Local Max Storage - 10MB
     - In javascript we should use `window.localStorage` | `localStorage`.
         - localStorage method:
             * localStorage.setItem('key', 'value') 
