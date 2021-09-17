@@ -28,7 +28,7 @@
    console.log('cookie:', cookie)
 
    // To clear the cookie
-    document.cookie = "max-age=0; "
+    document.cookie = "name=cookie storage; SameSite=none; Secure; max-age=0; path=/;"
    console.log('cookie:', document.cookie)
    ```
 
@@ -44,22 +44,22 @@
 ```
 // To declare the session
 
-let data = window.sessionStorage
-data.setItem('name', 'session storage')
+let sdata = window.sessionStorage
+sdata.setItem('name', 'session storage')
 
 // To get the Data
 
-console.log(data.getItem('name'))
+console.log(sdata.getItem('name'))
 
 // To remove the Data
 
-console.log(data.removeItem('name'))
-console.log(data)
+console.log(sdata.removeItem('name'))
+console.log(sdata)
 
 // To clear the Data
 
-console.log(data.clear())
-console.log(data)
+console.log(sdata.clear())
+console.log(sdata)
 
 ```
 
@@ -75,22 +75,22 @@ console.log(data)
 ```
 // To declare the local
 
-let data = window.localStorage
-data.setItem('name', 'local storage')
+let ldata = window.localStorage
+ldata.setItem('name', 'local storage')
 
 // To get the Data
 
-console.log(data.getItem('name'))
+console.log(ldata.getItem('name'))
 
 // To remove the Data
 
-console.log(data.removeItem('name'))
-console.log(data)
+console.log(ldata.removeItem('name'))
+console.log(ldata)
 
 // To clear the Data
 
-console.log(data.clear())
-console.log(data)
+console.log(ldata.clear())
+console.log(ldata)
 
 ```
 
