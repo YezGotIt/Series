@@ -98,6 +98,8 @@ console.log(ldata)
 # Links:
 [For cookie](https://www.w3schools.com/js/js_cookies.asp)
 
+[For cookie 2](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+
 [For sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
 [For localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
