@@ -106,3 +106,7 @@ xhr.onerror = () => {alert("error")}
 xhr.send()
 
 ```
+
+----
+
+[learn about XMLHttpRequest pro and cons](https://www.tutorialspoint.com/the-pros-and-cons-of-using-ajax)
