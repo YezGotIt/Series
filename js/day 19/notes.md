@@ -8,7 +8,7 @@
 <br>
 
 - Use in javascript `new Promise` | `Promise`
-    - promise object has 3 properties: 
+    - it has three state which are: 
         - `pending` : initial state, neither fulfilled nor rejected.
         - `fulfilled` : meaning that the operation was completed successfully.
         - `rejected` : meaning that the operation failed.
