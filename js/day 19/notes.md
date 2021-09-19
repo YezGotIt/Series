@@ -1,4 +1,4 @@
-# Promise - Day 19
+# Promise & Easy way to make API call - Day 19
 
 ### It represents the completion of an asynchronous operation.
 <br>
