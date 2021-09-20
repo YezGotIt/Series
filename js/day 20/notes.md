@@ -32,7 +32,7 @@
 
 
 // // * Making async 
-// const getData = new Promise( async (resolve, reject) => {
+// const getDataTwo = new Promise( async (resolve, reject) => {
 //     // * GET url
 //     let url ="https://restcountries.eu/rest/v2/all"
 
@@ -44,7 +44,7 @@
 // })
 
 // // * getting the data form promise
-// getData
+// getDataTwo
 // .then(data => {console.log(data)})
 // .catch(error => console.log(error))
 
