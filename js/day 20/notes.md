@@ -50,6 +50,9 @@
 
 ```
 
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
+[JavaScript Standard Style](https://github.com/standard/standard)
 
 ## Book for javascript 
 
