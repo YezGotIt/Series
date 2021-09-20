@@ -1,7 +1,7 @@
 # Problem solving in JS
 
 ## Statement
-### Use a one dimensional array to solve the following problem: Read in 20 each of which is between 10 and 100, inclusive. As each number is read. Validate and store it in the array only iIts  not a duplicate of a number already read. After reading all the values. display only the unique values that the user entered. Provide for the "worst case" in which all 20 numbers are different. Use the smallest array to solve this problem.
+### Use a one dimensional array to solve the following problem: Read in 20 each of which is between 10 and 100, inclusive. As each number is read. Validate and store it in the array only if it is  not a duplicate of a number already read. After reading all the values. display only the unique values that the user entered. Provide for the "worst case" in which all 20 numbers are different. Use the smallest array to solve this problem.
 
 
 ## Sample case:
