@@ -12,6 +12,19 @@
     - class name - in js `document.getElementsByClassName('class')`
     - id name - in js `document.getElementById('id')`
     - query selector | query selector all - in js `document.querySelector('any')` | `document.querySelectorAll('any')`
+ 
+ - Adding attribute by:
+    - with setAttribute()
+    - without setAttribute()
+    - classList / removing class
+
+- Text to HTMl element:
+    - innerText - get / set    
+    - innerHTML - get / set 
+
+- Adding style to that element:
+    - use style property
+    - eg: `h1.style.fontSize = "10px"` like this
 
 ### Let make index.html file
 ```
@@ -39,24 +52,11 @@
 </head>
 <body>
     <h1>Document Object Model (DOM)</h1>
-    <h2 class="welcome" id="one">Hello Guys</h2>
-    <h2 class="welcome" id="two">Hello Guys</h2>
-    <h2 class="welcome" id="three">Hello Guys</h2>
-    <h2 class="welcome" id="four">Hello Guys</h2>
+    <h2 class="welcome" id="one">Hello Guys one</h2>
+    <h2 class="welcome" id="two">Hello Guys two</h2>
+    <h2 class="welcome" id="three">Hello Guys three</h2>
+    <h2 class="welcome" id="four">Hello Guys four</h2>
     <script src="./app.js"></script>
 </body>
 </html>
 ``` 
-
-- Adding attribute by:
-    - with setAttribute()
-    - without setAttribute()
-    - classList / removing class
-
-- Text to HTMl element:
-    - innerText - get / set    
-    - innerHTML - get / set 
-
-- Adding style to that element:
-    - use style property
-    - eg: `h1.style.fontSize = "10px"` like this
