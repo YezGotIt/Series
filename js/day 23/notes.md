@@ -1,13 +1,17 @@
 # Adding external script
 
-### we can add external script to index.html file.
+### We can add external script to index.html file.
 
 ### Let see some basic encryption in js
 ```
 // * in build methods
 // * convert into base64 string
 let text = "Hello World"
-let encrypted = btoa()
+
+// for encrypted the text
+let encrypted = btoa(text)
+
+// for decrypted the text
 let decrypted = atob(encrypted)
 ```
 
