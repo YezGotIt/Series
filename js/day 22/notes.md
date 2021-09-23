@@ -147,8 +147,8 @@
 # Small test
 
 ### Create a span element on HTML document and create 100 to 100 numbers dynamically and append to the element span
- - Even numbers background is red
- - Odd numbers background is yellow
+ - Even numbers background is red & text color is white
+ - Odd numbers background is yellow & text color is black
 
 ## Output like this:
 
