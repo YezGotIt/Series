@@ -106,3 +106,45 @@
 ```
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 ```
+
+
+### final code in app.js
+```
+// * selecting the button
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', validating)
+
+// * getting the element
+let id = (id) => document.getElementById(id)
+
+// * validating function
+function validating(){
+  let firstName = id("firstName");
+  let lastName = id("lastName");
+  let address = id("address");
+  let gender = id("gender");
+  let state = id("state");
+  let country = id("country");
+  let pincode = id("pincode");
+   
+  checking(firstName, "Please enter your first name", "firstName")
+  checking(lastName, "Please enter your name", "lastName");
+  checking(address, "Please enter the address", "address");
+  checking(gender, "Please choose the gender", "gender");
+  checking(state, "Please choose the state", "state");
+  checking(country, "Please choose the country", "country");
+  checking(pincode, "Please choose the pincode", "pincode");
+}
+
+// * checking the value is not empty
+let checking = (id, message, name) =>{
+    if(id.value !== "" && id.value !== "Select"){
+        if(id.classList.contains("is-invalid")) id.classList.remove("is-invalid")
+        id.classList.add("is-valid")
+    } else {
+        document.getElementById(`${name}_error`).innerHTML = message
+        id.classList.add("is-invalid")
+    }
+}
+```
