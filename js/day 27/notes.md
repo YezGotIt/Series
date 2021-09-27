@@ -34,3 +34,47 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
 ```
+
+
+### final code app.js
+
+```
+
+// * API call
+function getData(){
+    const url = "https://restcountries.com/v3/all"
+    axios.get(url)
+    .then(response => displayData(response.data))
+    .catch(err => console.log(err))
+}
+
+getData()
+
+// * Display the info
+function displayData(data) {
+    const root = document.getElementById("root")
+    root.innerHTML = " "
+    data.forEach(element =>{
+        const {latlng,independent,capital,flags,area,region,name, languages} = country
+        const div = document.createElement("div")
+        div.setAttribute("class", "col-sm mt-2 mb-2")
+        div.innerHTML = `
+        <div class="card" style="width: 18rem;">
+                ${independent ? `<div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>` 
+                : `<div class="badge bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>`}
+                <img src="${flags.pop()}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${name.common}, ${region}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">${element.hasOwnProperty('capital') ? capital.pop() : "NIL"}</h6>
+                  <p class="card-text"><i class="fas fa-map-marker"></i> Latitude : ${latlng[0]},Longitude : ${latlng[1]}</p>
+                  <p class="card-text">Languages : ${element.hasOwnProperty('languages') ? Object.values(languages).toString() : "None"}</p>
+                  <p class="card-text">Area : ${area}</p>
+                </div>
+              </div>
+        `
+        root.appendChild(div)
+    })
+    
+
+}
+```
