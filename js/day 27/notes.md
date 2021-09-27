@@ -51,30 +51,32 @@ function getData(){
 getData()
 
 // * Display the info
-function displayData(data) {
+function displayData(countries){
     const root = document.getElementById("root")
     root.innerHTML = " "
-    data.forEach(element =>{
-        const {latlng,independent,capital,flags,area,region,name, languages} = country
+    countries.forEach(country=>{
+        const {latlng,independent,capital,flags,area,region,name, languages} = country 
+        console.log('country:', country)
         const div = document.createElement("div")
         div.setAttribute("class", "col-sm mt-2 mb-2")
         div.innerHTML = `
-        <div class="card" style="width: 18rem;">
-                ${independent ? `<div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>` 
-                : `<div class="badge bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>`}
-                <img src="${flags.pop()}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${name.common}, ${region}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">${element.hasOwnProperty('capital') ? capital.pop() : "NIL"}</h6>
-                  <p class="card-text"><i class="fas fa-map-marker"></i> Latitude : ${latlng[0]},Longitude : ${latlng[1]}</p>
-                  <p class="card-text">Languages : ${element.hasOwnProperty('languages') ? Object.values(languages).toString() : "None"}</p>
-                  <p class="card-text">Area : ${area}</p>
-                </div>
-              </div>
+                <div class="card" style="width: 18rem;">
+                    ${independent ? 
+                        `<div class="badge bg-success text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>`
+                        : `<div class="badge bg-warning text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">&nbsp;&nbsp;</div>`
+                    }
+                    <img class="card-img-top" src="${flags.pop()}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">${name.common}, ${region}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">${country.hasOwnProperty('capital') ? capital.pop() : "NIL"}</h6>
+                      <p class="card-text"><i class="fas fa-map-marker-alt"></i>  Latitude : ${latlng[0]},Longitude : ${latlng[1]}</p>
+                      <p class="card-text">Languages : ${country.hasOwnProperty('languages') ? Object.values(languages).toString() : "NONE"}</p>
+                      <p class="card-text">Area : ${area}</p>
+                    </div>
+                  </div>
         `
-        root.appendChild(div)
+root.appendChild(div)
     })
-    
 
 }
 ```
