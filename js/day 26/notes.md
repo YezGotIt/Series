@@ -19,7 +19,7 @@
 <body>
   <div class="container" id="root">
     <div class="row">
-      <div class="col-md-5 mx-auto">
+      <div class="col-md-12 col-lg-5 mx-auto">
         <div class="card card-body bg-light mt-5">
           <h2>Create An Account</h2>
           <p>Please fill out this form to register with us.</p>
