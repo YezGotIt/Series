@@ -36,7 +36,7 @@
 ```
 
 
-### final code app.js
+### final code in app.js
 
 ```
 
