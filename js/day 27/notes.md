@@ -1,4 +1,4 @@
-# Mini-Project-Four (Display the info in Rest-API)
+# Mini-Project-Four (Display the info in Rest-country-API)
 
 ### index.html
 ```
