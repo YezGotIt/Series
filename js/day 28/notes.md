@@ -77,7 +77,7 @@ let setAbb = (element,data,method) => element.setAttribute(data, method)
 
 let getAbb = (element,data) => element.getAttribute(data)
 
-
+// * adding the todo
 let addData = ()=>{
     let task = id("task")
     let cleanTxt = task.value.trim()
@@ -97,7 +97,7 @@ let addData = ()=>{
     task.value = ""
 }
 
-
+// * alert
 let alert = (className, message) => {
     return (
     alertMe = id("alertMe"),
@@ -108,7 +108,7 @@ let alert = (className, message) => {
     );
 }
 
-
+// * edit teh todo
 let edit = (edit)=>{
     let task = id("task")
     let payLoad = getItems()
@@ -117,6 +117,7 @@ let edit = (edit)=>{
     setAbb(task, "data-action", "edit")
 }
 
+// * removed todo
 let remove = (remove)=>{
     let payLoad = getItems()
     delete payLoad[remove]
@@ -125,8 +126,7 @@ let remove = (remove)=>{
 
 }
 
-
-
+// * display the todo
 let displayTodo = () =>{
     let payLoad = getItems()
     let root = id("root")
